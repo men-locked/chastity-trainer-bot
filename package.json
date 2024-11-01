@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/men-locked/chastity-trainer/issues"
   },
-  "homepage": "https://github.com/men-locked/chastity-trainer#readme"
+  "homepage": "https://github.com/men-locked/chastity-trainer#readme",
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "pino": "^9.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.13.0"
+  }
 }
