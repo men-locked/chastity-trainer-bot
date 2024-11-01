@@ -1,0 +1,19 @@
+{
+  "name": "chastity-trainer",
+  "version": "0.0.0",
+  "description": "The discord bot of chastity trainer game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/men-locked/chastity-trainer.git"
+  },
+  "author": "J.Dragon <j.dragon@chivincent.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/men-locked/chastity-trainer/issues"
+  },
+  "homepage": "https://github.com/men-locked/chastity-trainer#readme"
+}
