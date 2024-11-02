@@ -1,3 +1,6 @@
 {
-    "token": ""
+    "debug": false,
+    "token": "",
+    "clientId": "",
+    "guildId": ""
 }
