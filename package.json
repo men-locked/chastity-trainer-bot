@@ -4,6 +4,7 @@
   "description": "The discord bot of chastity trainer game",
   "scripts": {
     "dc-bot": "node cmd/discord_bot.js",
+    "api-server": "node cmd/api.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +18,10 @@
   },
   "homepage": "https://github.com/men-locked/chastity-trainer#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "discord.js": "^14.16.3",
+    "express": "^4.21.1",
+    "install": "^0.13.0",
     "module-alias": "^2.2.3",
     "pino": "^9.5.0",
     "sequelize": "^6.37.5",

@@ -5,10 +5,10 @@ const { DailyCheckin } = require('@lib/sequelize');
 const questions = {
     'status': () => {
         const statusLocked = new ButtonBuilder()
-        .setCustomId('status-locked-btn')
-        .setLabel('鎖著 Locked')
-        .setEmoji('🔒')
-        .setStyle(ButtonStyle.Primary);
+            .setCustomId('status-locked-btn')
+            .setLabel('鎖著 Locked')
+            .setEmoji('🔒')
+            .setStyle(ButtonStyle.Primary);
 
         const statusUnlocked = new ButtonBuilder()
             .setCustomId('status-unlocked-btn')

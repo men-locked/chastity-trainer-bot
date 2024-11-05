@@ -4,6 +4,7 @@ const path = require('node:path');
 const { REST, Routes } = require('discord.js');
 const { clientId, guildId, token } = require('../config.json');
 const logger = require('pino')();
+require('module-alias/register');
 
 const commands = [];
 // Grab all the command folders from the commands directory you created earlier

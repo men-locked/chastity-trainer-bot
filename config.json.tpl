@@ -2,5 +2,6 @@
     "debug": false,
     "token": "",
     "clientId": "",
-    "guildId": ""
+    "guildId": "",
+    "api_server_port": 8000
 }
