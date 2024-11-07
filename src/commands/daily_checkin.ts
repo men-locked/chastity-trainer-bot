@@ -6,7 +6,7 @@ import {
 } from "discord.js";
 
 import logger from "../lib/logger";
-import {DailyCheckin} from "../lib/sequelize";
+import { DailyCheckin } from "../lib/sequelize";
 
 
 class Option {
