@@ -3,9 +3,13 @@
   "version": "0.0.0",
   "description": "The discord bot of chastity trainer game",
   "scripts": {
-    "dc-bot": "node cmd/discord_bot.js",
-    "api-server": "node cmd/api.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev-bot": "tsx watch src/discord_bot.ts",
+    "dev-api": "tsx watch src/api_server.ts",
+    "start-bot": "node dist/discord_bot.js",
+    "start-api": "node dist/api_server.js",
+    "deploy-bot-command": "tsx src/deploy_commands.ts",
+    "build": "tsup src/discord_bot.ts --minify && tsup src/api_server.ts --minify",
+    "lint": "eslint src/"
   },
   "repository": {
     "type": "git",
@@ -19,6 +23,7 @@
   "homepage": "https://github.com/men-locked/chastity-trainer#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "discord-api-types": "^0.37.103",
     "discord.js": "^14.16.3",
     "express": "^4.21.1",
     "install": "^0.13.0",
@@ -28,7 +33,13 @@
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
-    "eslint": "^9.13.0"
+    "@tsconfig/node22": "^22.0.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "eslint": "^9.13.0",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
   },
   "_moduleAliases": {
     "@lib": "lib"
