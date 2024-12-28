@@ -4,11 +4,10 @@
   "description": "The discord bot of chastity trainer game",
   "scripts": {
     "dev-bot": "tsx watch src/discord_bot.ts",
-    "dev-api": "tsx watch src/api_server.ts",
     "start-bot": "node dist/discord_bot.js",
     "start-api": "node dist/api_server.js",
     "deploy-bot-command": "tsx src/deploy_commands.ts",
-    "build": "tsup src/discord_bot.ts --minify && tsup src/api_server.ts --minify",
+    "build": "tsup src/discord_bot.ts --minify",
     "lint": "eslint src/"
   },
   "repository": {
