@@ -4,9 +4,8 @@ import {
   CommandInteraction,
   SlashCommandBuilder
 } from "discord.js";
-
+import { api_host } from '../../config.json';
 import logger from "../lib/logger";
-import { DailyCheckin } from "../lib/sequelize";
 
 
 class Option {
@@ -71,12 +70,19 @@ class MessageHistory {
   }
 
   async save(interaction: CommandInteraction) {
-    await DailyCheckin.create({
-      user_id: interaction.user.id,
-      status: this.messages[0]?.answer?.customId,
-      cummed: this.messages[1]?.answer?.customId,
-      orgasm_type: this.messages[2]?.answer?.customId,
-    })
+    await fetch(`${api_host}/api/check-in`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        discord_id: interaction.user.id,
+        status: this.messages[0]?.answer?.customId,
+        cummed: this.messages[1]?.answer?.customId,
+        orgasm_type: this.messages[2]?.answer?.customId,
+        via: 'chastity-trainer-dcbot',
+      })
+    });
   }
 }
 
