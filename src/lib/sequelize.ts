@@ -12,15 +12,6 @@ export const sequelize = new Sequelize({
   logging: msg => logger.debug(msg),
 });
 
-export const DailyCheckin = sequelize.define('daily_checkin', {
-  user_id: INTEGER,
-  status: TEXT,
-  cummed: TEXT,
-  orgasm_type: TEXT,
-}, {
-  indexes: [{ using: 'BTREE', fields: ['user_id'] }],
-});
-
 export const Tooltip = sequelize.define('tooltips', {
   content: TEXT,
   author: TEXT,

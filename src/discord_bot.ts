@@ -6,13 +6,11 @@ import {
   GatewayIntentBits, Message,
 } from 'discord.js';
 
-import {
-  token, debug
-} from '../config.json';
+import { token } from '../config.json';
 import logger from './lib/logger';
 
 import { commands } from './commands';
-import { DailyCheckin, Tooltip } from "./lib/sequelize";
+import { Tooltip } from "./lib/sequelize";
 import { createDailyVerifyThread, notifyDailyVerify } from "./schedules/daily_verify_thread";
 import { MessageHandler } from "./handlers/message";
 
@@ -29,7 +27,6 @@ import { MessageHandler } from "./handlers/message";
   client.commands.set('calendar', commands.CalendarUrl);
 
   client.once(Events.ClientReady, async c => {
-    await DailyCheckin.sync({ force: debug });
     await Tooltip.sync();
 
     createDailyVerifyThread(client).start();
