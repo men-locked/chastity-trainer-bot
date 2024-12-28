@@ -6,9 +6,7 @@ import {
   GatewayIntentBits, Message,
 } from 'discord.js';
 
-import {
-  token, debug
-} from '../config.json';
+import { token } from '../config.json';
 import logger from './lib/logger';
 
 import { commands } from './commands';
